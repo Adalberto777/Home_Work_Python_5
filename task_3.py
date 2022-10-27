@@ -18,7 +18,6 @@ def write_to_file(result_str: str, file_name: str) -> None:
     with open(file_name, mode="a", encoding="utf-8") as file:
         file.write(f'{result_str}'+'\n')   
 
-
 def zip_file(source_lst: list) -> str:
     counter = 1
     zip_text =''
