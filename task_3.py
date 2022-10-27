@@ -31,12 +31,11 @@ def zip_file(source_lst: list) -> str:
             else: 
                 zip_text += str(counter) + source_lst[i] 
                 counter = 1
-        
-
     return zip_text
 
 def unzip_file(zipText: list) -> str:
     unzip_text =''
+    
     for i in range(0, len(zipText), 2):
            unzip_text = unzip_text + (zipText[i + 1] * int(zipText[i]))
     return unzip_text
