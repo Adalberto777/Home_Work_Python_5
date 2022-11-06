@@ -14,12 +14,12 @@ from random import randint
 # выбор режима игры и уровня сложности бота
 def select_mod(first_player: str) ->str: 
 
-    n = int(input(f'{first_player} if you want to play alone, press 1, if you play with your freand, press 2: '))
+    n = int(input(f'{first_player} if you want to play alone -> press 1, if you play with your freand -> press 2: '))
     if n == 2:
         second_player = input("write your friend's name: ")
         print(f'Hello, {second_player}')    
     else: 
-        bot_mod = int(input(f'{first_player} select the bot level, if low press 1, if high press 2: '))
+        bot_mod = int(input(f'{first_player} select the bot level, if low -> press 1, if high -> press 2: '))
         if bot_mod == 1:
             second_player = 'low_bot'
         else: second_player = 'high_bot'
@@ -58,7 +58,7 @@ def low_bot_mod(total_candies: int, taken_candies_max: int) ->int:
     return n
 
 
-# логика тяжолого бота
+# логика тяжелого бота
 def high_bot_mod(total_candies: int, taken_candies_max: int) ->int:
     if total_candies > taken_candies_max:
         n = total_candies % (taken_candies_max + 1)
@@ -105,9 +105,7 @@ def game(total_candies: int, first_player: str, second_player: str, winner_lotte
         total_candies -= taken_candies
         print(f'There are some sweets left in the basket: {total_candies}')
 
-    print(f'{winner} win, сongratulate') 
-
-    return winner
+    print(f'{winner} win, сongratulate')    
 
 
 total_candies = 220
