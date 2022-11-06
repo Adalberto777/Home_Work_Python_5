@@ -18,6 +18,10 @@ def write_to_file(result_str: str, file_name: str) -> None:
     with open(file_name, mode="a", encoding="utf-8") as file:
         file.write(f'{result_str}'+'\n')
 
+def clear_file(result_str: str, file_name: str) -> None:
+    with open(file_name, mode="w", encoding="utf-8") as file:
+        file.write(f'{result_str}')
+
    
 
 def zip_file(source_lst: list) -> str:
@@ -41,20 +45,17 @@ def unzip_file(zipText: str) -> str:
     for i in range(0, len(zipText), 2):
            unzip_text = unzip_text + (zipText[i + 1] * int(zipText[i]))
     return unzip_text
- 
-# my_str = 'ABCABCABCDDDFFFFFF'
-# write_to_file(my_str, "source_text_task_3.txt")
+
 
 sourse_text = read_source_text('source_text_task_3.txt')
-sourse_text_1 = str(read_source_text('source_text_task_3.txt'))
+sourse_text_1 = ''.join(read_source_text('source_text_task_3.txt'))
 zip_text=zip_file(sourse_text)
 unzip_text = unzip_file(zip_text)
 
-print(f"Zipped text is: {zip_text}")
-print(f"Unipped text is: {unzip_text}")
+# print(f"Zipped text is: {zip_text}")
+# print(f"Unipped text is: {unzip_text}")
 
+clear_file('' ,'result_text_task_3.txt')
 write_to_file(sourse_text_1 ,'result_text_task_3.txt')
 write_to_file(zip_text , 'result_text_task_3.txt')
 write_to_file(unzip_text, 'result_text_task_3.txt')
-
-
