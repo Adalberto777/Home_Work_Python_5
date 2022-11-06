@@ -1,0 +1,3 @@
+['A', 'B', 'C', 'A', 'B', 'C', 'A', 'B', 'C', 'D', 'D', 'D', 'F', 'F', 'F', 'F', 'F', 'F']
+1A1B1C1A1B1C1A1B1C3D6F
+ABCABCABCDDDFFFFFF
