@@ -13,16 +13,17 @@ def read_source_text(filename: str) -> list:
     with open(filename, "r", encoding = "utf-8") as data:
         text_for_work = list(data.read())       
         return text_for_work
+        
 
 def write_to_file(result_str: str, file_name: str) -> None:
     with open(file_name, mode="a", encoding="utf-8") as file:
         file.write(f'{result_str}'+'\n')
 
+
 def clear_file(result_str: str, file_name: str) -> None:
     with open(file_name, mode="w", encoding="utf-8") as file:
         file.write(f'{result_str}')
 
-   
 
 def zip_file(source_lst: list) -> str:
     counter = 1
@@ -38,6 +39,7 @@ def zip_file(source_lst: list) -> str:
                 zip_text += str(counter) + source_lst[i] 
                 counter = 1
     return zip_text
+
 
 def unzip_file(zipText: str) -> str:
     unzip_text =''
